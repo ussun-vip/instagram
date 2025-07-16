@@ -1,5 +1,5 @@
 // Import Turso (libSQL) client
-const { createClient } = require('@libsql/client');
+import { createClient } from "https://esm.sh/@libsql/client@0.6.0/web";
 
 exports.handler = async function(event, context) {
   // Create a client using your Turso DB URL and auth token
