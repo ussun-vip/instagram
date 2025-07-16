@@ -3,11 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Instagram</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #fafafa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 350px;
+            margin: 40px auto;
+        }
+        .login-box {
+            background: #fff;
+            border: 1px solid #dbdbdb;
+            padding: 40px 40px 24px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            margin-bottom: 30px;
+        }
+        .logo img {
+            width: 175px;
+        }
+        .input-box {
+            width: 100%;
+            margin-bottom: 6px;
+        }
+        .input-box input {
+            width: 100%;
+            padding: 9px 0 7px 8px;
+            background: #fafafa;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+        .login-btn {
+            width: 100%;
+            background: #3897f0;
+            border: none;
+            color: #fff;
+            padding: 8px 0;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 8px 0 18px 0;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin: 10px 0 18px 0;
+        }
+        .divider hr {
+            flex: 1;
+            border: none;
+            border-top: 1px solid #dbdbdb;
+        }
+        .divider span {
+            margin: 0 18px;
+            color: #8e8e8e;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        .fb-login {
+            color: #385185;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+        .fb-login img {
+            width: 16px;
+            margin-right: 8px;
+        }
+        .forgot {
+            color: #00376b;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .signup-box {
+            background: #fff;
+            border: 1px solid #dbdbdb;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .signup-box a {
+            color: #3897f0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 500px) {
+            .container {
+                width: 100%;
+                margin: 0;
+            }
+            .login-box, .signup-box {
+                border: none;
+                padding: 20px 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    amina koydugumun oruspu cocugu
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="https://instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="Instagram">
+            </div>
+            <form>
+                <div class="input-box">
+                    <input type="text" placeholder="Phone number, username, or email" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button class="login-btn" type="submit">Log In</button>
+            </form>
+            <div class="divider">
+                <hr>
+                <span>OR</span>
+                <hr>
+            </div>
+            <a href="#" class="fb-login">
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png" alt="Facebook">
+                Log in with Facebook
+            </a>
+            <a href="#" class="forgot">Forgot password?</a>
+        </div>
+        <div class="signup-box">
+            Don't have an account? <a href="#">Sign up</a>
+        </div>
+    </div>
 </body>
-<script type="module" src="script.js"></script>
 </html>
