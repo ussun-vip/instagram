@@ -1,0 +1,338 @@
+/* General body and container styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fafafa; /* Instagram's typical light background */
+    color: #262626; /* Default text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px; /* Typical width for login forms */
+}
+
+/* Login box styling */
+.login-box {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.instagram-logo {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 175px; /* Approximate width of Instagram logo */
+    height: 51px;
+    object-fit: contain;
+}
+
+/* Input field styling */
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-label {
+    position: relative;
+    display: block;
+}
+
+/* --- NEW: Label text styling for animation --- */
+.label-text {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    color: #8e8e8e; /* Default placeholder color */
+    font-size: 14px;
+    pointer-events: none;
+    transition: all 0.1s ease-out;
+    transform-origin: top left;
+}
+
+/* Style for when the input is focused OR has a value */
+.input-container.focused .label-text,
+.input-container.has-value .label-text {
+    transform: translateY(-10px) scale(0.85);
+    left: 10px;
+    color: #262626;
+}
+
+.input-field {
+    width: 100%;
+    padding: 14px 12px 12px 12px; /* Adjust padding to account for label */
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    background-color: #fafafa;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    color: #262626; /* Default text color for input */
+}
+
+.input-field:focus {
+    border-color: #262626; /* Instagram black */
+}
+
+.show-password-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #0095f6;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px;
+    outline: none;
+}
+
+/* Login button styling */
+.login-button {
+    width: 100%;
+    padding: 10px 16px;
+    background-color: #0095f6;
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Slightly rounded corners */
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px; /* Space above button */
+}
+
+.login-button:hover {
+    background-color: #1877f2; /* Darker shade on hover */
+}
+
+/* Forgot password link */
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #0095f6;
+    text-decoration: none;
+}
+.forgot-password:hover {
+    color: #0077cc;
+}
+
+/* Separator */
+.separator-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #8e8e8e;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.separator-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.separator-text {
+    margin: 0 15px;
+}
+
+/* Login with Facebook button */
+.login-with-facebook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    color: #0095f6;
+    /* remove underline */
+    text-decoration: none;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: color 0.2s ease;
+}
+
+.login-with-facebook .fb-icon {
+    margin-right: 8px;
+    fill: #0095f6; /* Facebook blue */
+}
+
+.login-with-facebook:hover {
+    color: #1877f2;
+}
+.login-with-facebook:hover .fb-icon {
+    fill: #1877f2;
+}
+
+/* Signup container */
+.signup-container {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 14px;
+    color: #262626;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px; /* Space before app download section */
+}
+
+.signup-link {
+    color: #0095f6;
+    font-weight: 600;
+    text-decoration: none;
+}
+.signup-link:hover {
+    color: #1877f2;
+}
+
+/* App download section */
+.app-download-section {
+    text-align: center;
+    font-size: 14px;
+    color: #262626;
+    margin-bottom: 20px; /* Space before footer */
+}
+
+.app-buttons {
+    margin-top: 15px;
+}
+
+.app-buttons a {
+    display: inline-block;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.app-buttons img {
+    height: 40px; /* Size of app store badges */
+    width: auto;
+}
+
+/* Footer styling */
+.footer-section {
+    margin-top: 40px; /* Increased spacing from app download */
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer-links span {
+    color: #262626;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.footer-links a,
+.footer-links span {
+    margin: 0 8px;
+    color: #8e8e8e;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #262626;
+    text-decoration: underline;
+}
+
+.language-selector-container {
+    position: relative;
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.language-selector {
+    background-color: transparent;
+    border: none;
+    color: #0095f6; /* Instagram blue for the language link */
+    cursor: pointer;
+    font-size: 13px;
+    font-family: inherit;
+    padding: 0;
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' class='w-6 h-6'%3E%3Ctitle%3EDown chevron icon%3C/title%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M21 17.502a.997.997 0 0 1-.707-.293L12 8.913l-8.293 8.296a1 1 0 1 1-1.414-1.414l9-9.004a1.03 1.03 0 0 1 1.414 0l9 9.004A1 1 0 0 1 21 17.502Z' fill='%230095f6'%3E%3C/path%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Creat fill='%230095f6' height='16' width='16'/%3E%3C/clipPath%3E%3C/svg%3E"); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 0px center;
+    background-size: 12px 12px;
+    padding-right: 18px; /* Space for the custom arrow */
+}
+
+/* Hide default arrow in Firefox */
+.language-selector::-ms-expand {
+    display: none;
+}
+
+
+.copyright-notice {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .login-box, .signup-container {
+        padding: 20px 20px;
+        margin-top: 15px;
+    }
+    .instagram-logo {
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+    .input-field, .login-button, .login-with-facebook {
+        font-size: 14px; /* Ensure consistency */
+    }
+    .show-password-btn {
+        font-size: 12px;
+    }
+    .app-buttons img {
+        height: 35px;
+    }
+    .footer-links {
+        flex-wrap: wrap; /* Ensure links wrap on smaller screens */
+        font-size: 12px;
+    }
+    .footer-links a, .footer-links span {
+        margin: 2px 4px; /* Adjust spacing for wrapping links */
+    }
+    .language-selector-container {
+        margin: 2px 4px;
+    }
+    .copyright-notice {
+        margin-top: 10px;
+    }
+}
