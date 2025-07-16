@@ -1,5 +1,5 @@
 // Import Turso (libSQL) client
-// import { createClient } from "https://esm.sh/@libsql/client@0.6.0/web";
+import { createClient } from "https://esm.sh/@libsql/client@0.6.0/web";
 
 exports.handler = async function (event, context) {
     try {
